@@ -84,6 +84,7 @@ class DirectionsController < ApplicationController
       @direction = Direction.find(params[:id])
     end
 
+    #test data for commit test
     # Never trust parameters from the scary internet, only allow the white list through.
     def direction_params
       params.require(:direction).permit(:Steps)
