@@ -17,13 +17,16 @@
         <td><%= recipe.Name %></td>
         <td><%= recipe.Description %></td>
         <td><%= link_to 'Show', recipe %></td>
+        <% if user_signed_in? %>
         <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
         <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
+<% if user_signed_in? %>
 <%= link_to 'New Recipe', new_recipe_path %>
+<% end %>

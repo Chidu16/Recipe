@@ -4,6 +4,7 @@
   <strong>Name:</strong>
   <%= @ingredient.Name %>
 </p>
-
+<% if user_signed_in? %>
 <%= link_to 'Edit', edit_ingredient_path(@ingredient) %> |
+<% end %>
 <%= link_to 'Back', ingredients_path %>

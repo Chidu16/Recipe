@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
   
+  resources :profiles
+  get '/signedinuserprofile' => 'profiles#signedinuserprofile'
+  devise_for :users
+  root :to => 'home#index'
+  get 'home/index'
   resources :ingredients
   resources :recipes do
     resources :directions

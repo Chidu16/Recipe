@@ -6,6 +6,7 @@
   <strong>Steps:</strong>
   <%= @direction.Steps %>
 </p>
-
+<% if user_signed_in? %>
 <%= link_to 'Edit', edit_recipe_direction_path(@recipe, @direction) %> |
-<%= link_to 'Back', recipe_directions_path(@recipe) %>
+<% end %>
+<%= link_to 'Back', recipe_directions_path(@recipe) %> |
