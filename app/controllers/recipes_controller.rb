@@ -60,6 +60,15 @@ class RecipesController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+def index
+  @recipes = Recipe.all
+  if params[:search]
+    @recipes = Recipe.search(params[:search]).order("created_at DESC")
+  else
+    @recipes = Recipe.all.order("created_at DESC")
+  end
+end
 
   private
     # Use callbacks to share common setup or constraints between actions.
