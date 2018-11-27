@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :courses
+  resources :cuisines
   resources :profiles
   get '/signedinuserprofile' => 'profiles#signedinuserprofile'
   devise_for :users
