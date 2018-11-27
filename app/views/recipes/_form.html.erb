@@ -26,11 +26,7 @@
 <div class="form-group">
 <div class="row">
 <div class="col-sm-offset-2 col-sm-8">
-<<<<<<< HEAD
-<%= form.collection_check_boxes :ingredient_ids, Ingredient.where(category: "Veggie"), :id, :Name do |ing| %>
-=======
 <%= form.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :Name do |ing| %>
->>>>>>> f22a553989b5657c3c52db72066cfbf5456d2535
 <% ing.label(class: "checkbox-inline input_checkbox") {ing.check_box(class: "checkbox") + ing.text} %>
 <% end %>
 </div>
