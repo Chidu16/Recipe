@@ -1,5 +1,5 @@
 class Cuisine < ApplicationRecord
     
-   
+  
     
 end
