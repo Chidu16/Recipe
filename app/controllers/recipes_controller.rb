@@ -71,13 +71,12 @@ def index
 end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
+    
     def set_recipe
       @recipe = Recipe.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
     def recipe_params
-      params.require(:recipe).permit(:Name, :Description, :course_id, :cuisine_id, ingredient_ids: [] )
+      params.require(:recipe).permit(:Name, :Description, :course_id, :cuisine_id, ingredient_ids: [], direction_ids: [])
     end
 end
