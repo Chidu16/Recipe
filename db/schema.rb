@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_28_232116) do
+ActiveRecord::Schema.define(version: 2018_11_29_125808) do
+
+  create_table "comments", force: :cascade do |t|
+    t.string "user_name"
+    t.text "body"
+    t.integer "recipe_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_id"], name: "index_comments_on_recipe_id"
+  end
 
   create_table "courses", force: :cascade do |t|
     t.string "CourseType"

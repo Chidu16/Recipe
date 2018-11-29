@@ -26,7 +26,9 @@
   <tbody>
     <% @recipes.each do |recipe| %>
       <tr>
-        <td><%= image_tag recipe.image_url(:thumb).to_s %></td>
+        <td><%= link_to recipe do %>
+          <%= image_tag recipe.image_url(:thumb).to_s %>
+          <% end %></td>
         <td><%= recipe.Name %></td>
         <td><%= recipe.Description %></td>
         <td><%= link_to 'Show', recipe %></td>

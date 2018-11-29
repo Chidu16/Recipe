@@ -6,6 +6,8 @@ has_many :ing_linkers, dependent: :delete_all
 
   has_many :directions, dependent: :destroy 
   
+  has_many :comments, dependent: :destroy 
+  
   mount_uploader :image, ImageUploader
   
   
