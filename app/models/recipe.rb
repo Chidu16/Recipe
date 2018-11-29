@@ -10,6 +10,9 @@ has_many :ing_linkers, dependent: :delete_all
   
   mount_uploader :image, ImageUploader
   
+  belongs_to :course
+  belongs_to :cuisine
+  
   
   def self.search(search)
   where("Name LIKE ?", "%#{search}%") 

@@ -1,6 +1,11 @@
 <p id="notice"><%= notice %></p>
 
 <p>
+   <%= image_tag @recipe.image_url(:thumb).to_s %>
+</p>
+
+
+<p>
   <strong>Name:</strong>
   <%= @recipe.Name %>
 </p>
@@ -10,6 +15,15 @@
   <%= @recipe.Description %>
 </p>
 
+<p>
+  <strong>Course:</strong>
+  <%= @recipe.course.CourseType %>
+</p>
+
+<p>
+  <strong>Cuisine:</strong>
+  <%= @recipe.cuisine.CuisineType %>
+</p>
 
 
 
