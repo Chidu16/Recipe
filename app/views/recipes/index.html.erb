@@ -15,9 +15,10 @@
 <table>
   <thead>
     <tr>
+      <th></th>
       <th>Name</th>
       <th>Description</th>
-      <th>Direction</th>
+      
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -25,6 +26,7 @@
   <tbody>
     <% @recipes.each do |recipe| %>
       <tr>
+        <td><%= image_tag recipe.image_url(:thumb).to_s %></td>
         <td><%= recipe.Name %></td>
         <td><%= recipe.Description %></td>
         <td><%= link_to 'Show', recipe %></td>

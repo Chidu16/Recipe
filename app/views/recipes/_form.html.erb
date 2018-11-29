@@ -25,10 +25,7 @@
     <%= form.label :Directions %>
   </div>
   
-   <div class="field">
-    <%= form.label :Steps %>
-    <%= form.text_field :Steps %>
-  </div>
+   
   
 
 <div class="form-group">
@@ -51,7 +48,15 @@
     
     <%= collection_select(:recipe, :course_id, Course.all, :id, :CourseType, prompt: true) %>
   </div>
-
+  
+  
+  <p>
+    <%= form.file_field :image %>
+  </p>
+  <p>
+    <%= form.label :remote_image_url, "or image URL" %><br />
+    <%= form.text_field :remote_image_url %>
+  </p>
 
 
   <div class="actions">
