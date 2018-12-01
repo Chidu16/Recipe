@@ -28,6 +28,13 @@ has_many :ing_linkers, dependent: :delete_all
   Recipe.joins(:ingredients).where("ingredients.Name LIKE ?", "%#{search}%")
  end 
   
+<<<<<<< HEAD
+=======
+
+  def to_s
+    
+  self.Name
+>>>>>>> 775ecb9939dcf84e1d0c52279c46cadf32fbe1fd
   
  
 	
@@ -35,6 +42,7 @@ has_many :ing_linkers, dependent: :delete_all
   def to_s
     self.Name
   end
+
   
   
 
