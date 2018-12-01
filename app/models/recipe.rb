@@ -21,5 +21,6 @@ has_many :ing_linkers, dependent: :delete_all
   def self.search(search)
   where("Name LIKE ?", "%#{search}%") 
   end
-
+  
+  
 end
