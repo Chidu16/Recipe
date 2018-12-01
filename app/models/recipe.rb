@@ -1,6 +1,6 @@
 class Recipe < ApplicationRecord
-  
-
+	
+	
 has_many :ing_linkers, dependent: :delete_all
   has_many :ingredients, through: :ing_linkers, dependent: :delete_all
 
@@ -20,14 +20,23 @@ has_many :ing_linkers, dependent: :delete_all
    belongs_to :user
   
   
-  def self.search(search)
-  where("Name LIKE ?", "%#{search}%") 
-  end
+  #def self.search(search)
+  #where("Name LIKE ?", "%#{search}%") 
+  #end
+  
+   def self.search(*args)
+  Recipe.joins(:ingredients).where("ingredients.Name LIKE ?", "%#{search}%")
+ end 
+  
+  
+ 
+	
   
   def to_s
-    
-  self.Name
-  
+    self.Name
   end
+  
+  
+
   
 end

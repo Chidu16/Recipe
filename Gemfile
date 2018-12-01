@@ -73,6 +73,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 #devise gem 
 gem 'devise'
 
+
+
 # Heroku uses Heroku Postgres DB based on PostgreSQL
 group :production do
 gem 'pg'
