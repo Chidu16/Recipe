@@ -1,5 +1,6 @@
 require 'test_helper'
 
+
 class RecipesControllerTest < ActionDispatch::IntegrationTest
   setup do
     @recipe = recipes(:one)
@@ -45,4 +46,5 @@ class RecipesControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to recipes_url
   end
+  
 end
