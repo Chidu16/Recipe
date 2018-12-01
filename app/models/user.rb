@@ -5,4 +5,11 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
          has_one :profile
+         has_many :meal_plans
+         
+         def recipe_options
+           recipes.map do |recipe|
+          [recipe.name, recipe.id]
+        end
+    end
 end
