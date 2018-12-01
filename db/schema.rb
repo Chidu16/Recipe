@@ -10,15 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_29_125808) do
+ActiveRecord::Schema.define(version: 2018_11_30_232630) do
 
   create_table "comments", force: :cascade do |t|
-    t.string "user_name"
     t.text "body"
     t.integer "recipe_id"
+    t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["recipe_id"], name: "index_comments_on_recipe_id"
+    t.index ["user_id"], name: "index_comments_on_user_id"
   end
 
   create_table "courses", force: :cascade do |t|
@@ -55,6 +56,15 @@ ActiveRecord::Schema.define(version: 2018_11_29_125808) do
     t.string "category"
   end
 
+  create_table "likes", force: :cascade do |t|
+    t.integer "recipe_id"
+    t.integer "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_id"], name: "index_likes_on_recipe_id"
+    t.index ["user_id"], name: "index_likes_on_user_id"
+  end
+
   create_table "profiles", force: :cascade do |t|
     t.string "firstname"
     t.string "lastname"
@@ -73,8 +83,10 @@ ActiveRecord::Schema.define(version: 2018_11_29_125808) do
     t.integer "course_id"
     t.integer "cuisine_id"
     t.string "image"
+    t.integer "user_id"
     t.index ["course_id"], name: "index_recipes_on_course_id"
     t.index ["cuisine_id"], name: "index_recipes_on_cuisine_id"
+    t.index ["user_id"], name: "index_recipes_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|

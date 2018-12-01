@@ -43,11 +43,18 @@
 </p>
 <% end %>
 
+
+
+<span class="pull-right">
+	<%= link_to recipe_likes_path(@recipe, like: true), method: 'post', remote: true do %>
+  <i class="icon-thumbs-up"></i>
+	<%= @recipe.likes.count %>likes
+	<% end %>
+</span>
+
 <h3>Comments</h3>
 <% @comments.each do |comment| %>
   <div>
-    <strong><%= comment.user_name %></strong>
-    <br>
     <p><%= comment.body %></p>
     <p><%= link_to 'Delete', comment_path(comment), method: :delete, data: { confirm: 'Are you sure?' } %></p>
   </div>
