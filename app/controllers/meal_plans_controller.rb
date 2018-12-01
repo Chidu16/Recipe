@@ -4,12 +4,14 @@ class MealPlansController < ApplicationController
   # GET /meal_plans
   # GET /meal_plans.json
   def index
-    @meal_plans = MealPlan.all
+  @current_meal_plan = current_user.meal_plans.where("start_date <= ? AND end_date >= ?", Date.today, Date.today).first
+  @meal_plans = current_user.meal_plans.order("start_date desc")
   end
 
   # GET /meal_plans/1
   # GET /meal_plans/1.json
   def show
+    @meal_plan = current_user.meal_plans.find(params[:id])
   end
 
   # GET /meal_plans/new
@@ -20,7 +22,7 @@ class MealPlansController < ApplicationController
     )
     @meal_plan.build_meals
     end
-  end
+ 
 
   # GET /meal_plans/1/edit
   def edit
@@ -29,17 +31,15 @@ class MealPlansController < ApplicationController
   # POST /meal_plans
   # POST /meal_plans.json
   def create
-    @meal_plan = MealPlan.new(meal_plan_params)
+      @meal_plan = current_user.meal_plans.build(meal_plan_params)
 
-    respond_to do |format|
-      if @meal_plan.save
-        format.html { redirect_to @meal_plan, notice: 'Meal plan was successfully created.' }
-        format.json { render :show, status: :created, location: @meal_plan }
-      else
-        format.html { render :new }
-        format.json { render json: @meal_plan.errors, status: :unprocessable_entity }
-      end
+    if @meal_plan.save
+      redirect_to meal_plan_path(@meal_plan), notice: "Meal plan created!"
+    else
+      @errors = @meal_plan.errors.full_messages
+    render :new
     end
+  end
   
 
   # PATCH/PUT /meal_plans/1
@@ -59,11 +59,9 @@ class MealPlansController < ApplicationController
   # DELETE /meal_plans/1
   # DELETE /meal_plans/1.json
   def destroy
+    @meal_plan = current_user.meal_plans.find(params[:id])
     @meal_plan.destroy
-    respond_to do |format|
-      format.html { redirect_to meal_plans_url, notice: 'Meal plan was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    redirect_to meal_plans_path, notice: "Meal plan deleted!"
   end
 
   private
@@ -72,8 +70,17 @@ class MealPlansController < ApplicationController
       @meal_plan = MealPlan.find(params[:id])
     end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
+    
     def meal_plan_params
-      params.require(:meal_plan).permit(:start_date, :end_date)
+      params.require(:meal_plan).permit(
+      :start_date,
+      :end_date,
+      meals_attributes: [
+      :id,
+      :date,
+      :recipe_id
+     ]
+    )
     end
+    
 end

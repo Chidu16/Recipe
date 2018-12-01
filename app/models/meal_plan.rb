@@ -1,10 +1,13 @@
 class MealPlan < ApplicationRecord
     
     belongs_to :user
+    has_many :meals, inverse_of: :meal_plan, dependent: :destroy
 
     validates :start_date, presence: true
     validates :end_date, presence: true
     validates :user, presence: true
+    
+    accepts_nested_attributes_for :meals
 
     def build_meals
             user_recipe_ids = user.recipes.pluck(:id)
