@@ -1,7 +1,7 @@
 class MealPlan < ApplicationRecord
     
     belongs_to :user
-    has_many :meals, inverse_of: :meal_plan, dependent: :destroy
+    has_many :meals, inverse_of: :meal_plan, dependent: :destroy  
 
     validates :start_date, presence: true
     validates :end_date, presence: true
