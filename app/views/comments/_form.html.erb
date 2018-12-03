@@ -11,17 +11,20 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :body %>
-    <%= form.text_area :body %>
-  </div>
+  
   
   <%= form.hidden_field :recipe_id %>
   <%= form.hidden_field :user_id %>
+  
+  <div class="field">
+    <%= form.text_area :body %>
+    	<button type="submit" class="btn btn-success green"><i class="fa fa-share"></i> Share</button>
+  </div>
+  
+									
+								
+								
 
  
-
-  <div class="actions">
-    <%= form.submit %>
   </div>
 <% end %>

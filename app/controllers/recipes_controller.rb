@@ -65,6 +65,15 @@ class RecipesController < ApplicationController
     end
   end
   
+#   def index
+#   if params[:ingredient]
+#     @recipes = Recipe.joins(:ingredinet).where(Name: params[:Name].downcase)
+#   else
+#     @Recipe = Recipe.all
+#   end
+# end
+
+  
 def index
   @recipes = Recipe.all
   if params[:search]

@@ -8,6 +8,6 @@ class Meal < ApplicationRecord
   
   def to_s
   "#{start_date} - #{end_date}"
-end
+  end
 
 end
