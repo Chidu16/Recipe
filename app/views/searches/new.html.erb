@@ -1,0 +1,21 @@
+<h1>Advanced Search</h1>
+
+<%= form_for @search do |f| %>
+  <div class="field">
+    <%= f.label :keywords %><br />
+    <%= f.text_field :keywords %>
+  </div>
+  <div class="field">
+    <%= f.label :ingredient_id %><br />
+    <%= f.collection_select :ingredient_id, Ingredient.order(:Name), :id, :Name, include_blank: true %>
+  </div>
+   <div class="field">
+    <%= f.label :course_id %><br />
+    <%= f.collection_select :course_id, Course.order(:CourseType), :id, :CourseType, include_blank: true %>
+  </div>
+   <div class="field">
+    <%= f.label :cuisine_id %><br />
+    <%= f.collection_select :cuisine_id, Cuisine.order(:CuisineType), :id, :CuisineType, include_blank: true %>
+  </div>
+  <div class="actions"><%= f.submit "Search" %></div>
+<% end %>
