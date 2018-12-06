@@ -23,8 +23,8 @@
         <td><%= link_to recipe do %>
           <%= image_tag recipe.image_url(:thumb).to_s %>
           <% end %></td>
-        <td><%= recipe.Name %></td>
-        <td><%= recipe.Description %></td>
+        <td><%= recipe.name %></td>
+        <td><%= recipe.description %></td>
         <td><%= link_to 'Show', recipe %></td>
         <% if user_signed_in? %>
         <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
