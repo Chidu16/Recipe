@@ -7,7 +7,7 @@ class Search < ApplicationRecord
 private
 
     def find_recipes
-      recipes = Recipe.order(:Name)
+      recipes = Recipe.order(:name)
       recipes = recipes.where( "recipes.name like ?","%#{keywords}%") if keywords.present?
       recipes = recipes.joins(:ingredients).where(ingredients: { id: ingredient_id}) if ingredient_id.present?
       recipes = recipes.where(course_id: course_id) if course_id.present?
