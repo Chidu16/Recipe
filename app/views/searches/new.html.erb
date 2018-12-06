@@ -7,7 +7,7 @@
   </div>
   <div class="field">
     <%= f.label :ingredient_id %><br />
-    <%= f.collection_select :ingredient_id, Ingredient.order(:Name), :id, :Name, include_blank: true %>
+    <%= f.collection_select :ingredient_id, Ingredient.order(:Name), :id, :Name, include_blank: true, :multiple => true   %>
   </div>
    <div class="field">
     <%= f.label :course_id %><br />

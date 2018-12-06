@@ -1,5 +1,9 @@
+
+
 class Recipe < ApplicationRecord
 	
+	validates :Name, presence: true
+  validates :Description, presence: true, length: {minimum: 10, maximum: 300}
 	
 has_many :ing_linkers, dependent: :delete_all
   has_many :ingredients, through: :ing_linkers, dependent: :delete_all

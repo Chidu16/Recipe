@@ -10,7 +10,7 @@ class MealPlan < ApplicationRecord
     accepts_nested_attributes_for :meals
 
     def build_meals
-            user_recipe_ids = user.recipes.pluck(:id)
+            user_recipe_ids = Recipe.pluck(:id)
 
     (start_date..end_date).each do |date|
       available_recipe_ids = user_recipe_ids - meals.map(&:recipe_id)
