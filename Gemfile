@@ -36,7 +36,9 @@ gem 'carrierwave'
 
 gem 'mini_magick'
 
+#gem 'notifications', '~> 0.6.0'
 
+gem 'rails-observers'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

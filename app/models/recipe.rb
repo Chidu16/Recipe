@@ -12,6 +12,8 @@ has_many :ing_linkers, dependent: :delete_all
   
   has_many :meals, dependent: :destroy 
   
+  has_many :recommendations
+ 
   mount_uploader :image, ImageUploader
   
   belongs_to :course
@@ -26,25 +28,11 @@ has_many :ing_linkers, dependent: :delete_all
   
    def self.search(*args)
   Recipe.joins(:ingredients).where("ingredients.Name LIKE ?", "%#{search}%")
- end 
-  
-<<<<<<< HEAD
-=======
-
-  def to_s
-    
-  self.Name
->>>>>>> 775ecb9939dcf84e1d0c52279c46cadf32fbe1fd
-  
+ end
  
-	
-  
   def to_s
     self.Name
   end
-
   
-  
-
-  
+ 
 end

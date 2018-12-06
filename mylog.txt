@@ -1,0 +1,30 @@
+###############Observer Demo:#
++++ CommentObserver: The comment has been added
+##############################
+###############Observer Demo:#
++++ CommentObserver: The comment has been added
+##############################
+###############Observer Demo:#
++++ CommentObserver: The comment has been added
+##############################
+###############Observer Demo:#
++++ CommentObserver: The comment has been added
+##############################
+###############Observer Demo:#
++++ CommentObserver: The comment has been added
+##############################
+###############Observer Demo:#
++++ CommentObserver: The comment has been added 20
+##############################
+###############Observer Demo:#
++++ CommentObserver: The comment has been added 20
+##############################
+###############Observer Demo:#
++++ CommentObserver: The comment has been added 40
+##############################
+###############Observer Demo:#
++++ CommentObserver: The comment has been added 40
+##############################
+###############Observer Demo:#
++++ CommentObserver: The comment has been added 40
+##############################
