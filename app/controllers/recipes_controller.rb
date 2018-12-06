@@ -31,6 +31,8 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(recipe_params)
     @recipe.user_id = current_user.id
+    
+    puts @recipe.inspect
 
     respond_to do |format|
       if @recipe.save
