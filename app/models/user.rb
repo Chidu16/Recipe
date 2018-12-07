@@ -11,10 +11,11 @@ class User < ApplicationRecord
          has_many :meal_plans
          
          def recipe_options
-           recipes.map do |recipe|
-          [recipe.Name, recipe.id]
+             @recipe = Recipe.all
+            @recipe.map do |recipe|
+            [recipe.name, recipe.id]
+            end
         end
-    end
 
          has_many :likes, dependent: :destroy
          has_many :comments, dependent: :destroy

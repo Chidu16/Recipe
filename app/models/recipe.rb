@@ -32,7 +32,7 @@ has_many :ing_linkers, dependent: :delete_all
 
   def to_s
     
-  self.Name
+  self.name
 
   end
 
