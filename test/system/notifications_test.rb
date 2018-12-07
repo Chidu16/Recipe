@@ -14,7 +14,7 @@ class NotificationsTest < ApplicationSystemTestCase
     visit notifications_url
     click_on "New Notification"
 
-    fill_in "User", with: @notification.User_id
+    fill_in "User", with: @notification.user_id
     click_on "Create Notification"
 
     assert_text "Notification was successfully created"
@@ -25,7 +25,7 @@ class NotificationsTest < ApplicationSystemTestCase
     visit notifications_url
     click_on "Edit", match: :first
 
-    fill_in "User", with: @notification.User_id
+    fill_in "User", with: @notification.user_id
     click_on "Update Notification"
 
     assert_text "Notification was successfully updated"
