@@ -67,23 +67,40 @@ class RecipesController < ApplicationController
     end
   end
   
-#   def index
-#   if params[:ingredient]
-#     @recipes = Recipe.joins(:ingredinet).where(Name: params[:Name].downcase)
-#   else
-#     @Recipe = Recipe.all
-#   end
-# end
+  def index
+    #@recipes = Recipe.all
+    puts "$%%"
+    
+    puts params[:search].inspect
+    
+    if params[:search]
+      @recipes = Recipe.search(params[:search])
+      
+      puts "if body"
+
+      puts @recipes.inspect
+      @recipes = Recipe.search(params[:search]).order("created_at DESC")
+      
+    else
+       
+      @recipes = Recipe.all.order("created_at DESC")
+      puts "else body"
+
+      puts @recipes.inspect
+    end
+  end
 
   
-def index
-  @recipes = Recipe.all
-  if params[:search]
-    @recipes = Recipe.search(params[:search].split(",")).order("created_at DESC")
-  else
-    @recipes = Recipe.all.order("created_at DESC")
-  end
-end
+# def index
+#   @recipes = Recipe.all
+#   if params[:sitesearch]
+#     cnt=(params[:sitesearch].split(",").size)
+#     @recipes =  Recipe.joins(:ingredients).where(ingredients:{name: params[:sitesearch].split(",")}).group("recipe_id")
+#     .having("count(*)>=?",cnt )
+#   else
+#     @recipes = Recipe.all.order("created_at DESC")
+#   end
+# end
 
   private
     
@@ -92,6 +109,7 @@ end
     end
 
     def recipe_params
-      params.require(:recipe).permit(:Name, :Description, :course_id, :cuisine_id,:direction_id, :image,:remote_image_url, ingredient_ids: [] )
+      params.require(:recipe).permit(:name, :description, :course_id, :cuisine_id,:direction_id, :image,
+      :remote_image_url, ingredient_ids: [] )
     end
 end

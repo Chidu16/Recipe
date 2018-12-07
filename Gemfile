@@ -32,11 +32,22 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
+#gem 'rails-observers'
+
+gem 'rails-observers'
+
 gem 'carrierwave'
 
 gem 'mini_magick'
 
+<<<<<<< HEAD
 #gem 'notifications', '~> 0.6.0'
+=======
+gem 'will_paginate'
+
+gem 'bootstrap-will_paginate'
+
+>>>>>>> 27a999bfb73cc5684881400ed10ac9d607c63ce9
 
 gem 'rails-observers'
 

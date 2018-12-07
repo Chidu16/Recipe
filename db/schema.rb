@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 2018_12_06_153831) do
+=======
+ActiveRecord::Schema.define(version: 2018_12_06_170437) do
+>>>>>>> 27a999bfb73cc5684881400ed10ac9d607c63ce9
 
   create_table "comments", force: :cascade do |t|
     t.text "body"
@@ -105,8 +109,8 @@ ActiveRecord::Schema.define(version: 2018_12_06_153831) do
   end
 
   create_table "recipes", force: :cascade do |t|
-    t.string "Name"
-    t.string "Description"
+    t.string "name"
+    t.string "description"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.integer "course_id"
@@ -116,6 +120,15 @@ ActiveRecord::Schema.define(version: 2018_12_06_153831) do
     t.index ["course_id"], name: "index_recipes_on_course_id"
     t.index ["cuisine_id"], name: "index_recipes_on_cuisine_id"
     t.index ["user_id"], name: "index_recipes_on_user_id"
+  end
+
+  create_table "searches", force: :cascade do |t|
+    t.string "keywords"
+    t.integer "ingredient_id"
+    t.integer "course_id"
+    t.integer "cuisine_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|

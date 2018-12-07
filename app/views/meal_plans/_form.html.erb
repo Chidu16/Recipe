@@ -15,8 +15,8 @@
   <div class="meals">
     <%= form.fields_for :meals do |meal_fields| %>
       <div class="meal">
-        <%= meal_fields.hidden_field :id %>
-        <%= meal_fields.hidden_field :date %>
+        <%= meal_fields.hidden_field :id %><br/>
+        <%= meal_fields.hidden_field :date %><br/>
         <p><%= meal_fields.object.date.to_s %></p>
         <div class="form-control">
           <%= meal_fields.label :recipe_id %>
@@ -25,7 +25,8 @@
       </div>
     <% end %>
   </div>
-
+<br/>
+<br/>
   <div class="actions">
     <%= form.submit %>
   </div>

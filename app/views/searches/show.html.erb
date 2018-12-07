@@ -1,0 +1,29 @@
+<h1>Search Results</h1>
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>Name</th>
+      <th>Description</th>
+      
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @search.recipes.each do |recipe| %>
+      <tr>
+        <td><%= link_to recipe do %>
+          <%= image_tag recipe.image_url(:thumb).to_s %>
+          <% end %></td>
+        <td><%= recipe.name %></td>
+        <td><%= recipe.description %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
