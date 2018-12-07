@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_06_170437) do
+ActiveRecord::Schema.define(version: 2018_12_07_113522) do
 
   create_table "comments", force: :cascade do |t|
     t.text "body"
@@ -117,6 +117,7 @@ ActiveRecord::Schema.define(version: 2018_12_06_170437) do
     t.index ["cuisine_id"], name: "index_recipes_on_cuisine_id"
     t.index ["user_id"], name: "index_recipes_on_user_id"
   end
+
 
   create_table "searches", force: :cascade do |t|
     t.string "keywords"
