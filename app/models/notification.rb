@@ -1,4 +1,4 @@
 class Notification < ApplicationRecord
-  belongs_to :User
-  belongs_to :Comment
+  belongs_to :user
+  belongs_to :comment
 end

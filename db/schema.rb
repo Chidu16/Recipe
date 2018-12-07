@@ -11,10 +11,6 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 2018_12_06_170437) do
-<<<<<<< HEAD
-
-=======
->>>>>>> 0eab1c25ee186b4e2a0fb04408549381cc17e374
 
   create_table "comments", force: :cascade do |t|
     t.text "body"
@@ -120,6 +116,13 @@ ActiveRecord::Schema.define(version: 2018_12_06_170437) do
     t.index ["course_id"], name: "index_recipes_on_course_id"
     t.index ["cuisine_id"], name: "index_recipes_on_cuisine_id"
     t.index ["user_id"], name: "index_recipes_on_user_id"
+  end
+
+  create_table "recommendations", force: :cascade do |t|
+    t.integer "recipe_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_id"], name: "index_recommendations_on_recipe_id"
   end
 
   create_table "searches", force: :cascade do |t|

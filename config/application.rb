@@ -3,11 +3,6 @@ require_relative 'boot'
 require 'rails/all'
 
 
-<<<<<<< HEAD
-=======
-
-
->>>>>>> 0eab1c25ee186b4e2a0fb04408549381cc17e374
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
