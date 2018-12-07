@@ -11,17 +11,29 @@ class User < ApplicationRecord
          has_many :meal_plans
          
          def recipe_options
-           recipes.map do |recipe|
-          [recipe.Name, recipe.id]
+             @recipe = Recipe.all
+            @recipe.map do |recipe|
+            [recipe.name, recipe.id]
+            end
         end
-    end
 
          has_many :likes, dependent: :destroy
          has_many :comments, dependent: :destroy
          has_many :recipes, dependent: :destroy
+<<<<<<< HEAD
          
           # include Recommendation
          has_many :recommendations, dependent: :destroy
          has_many :notifications, dependent: :destroy
         
+=======
+
+         has_many :recommendations, dependent: :destroy
+         has_many :notifications, dependent: :destroy
+        
+
+         
+          # include Recommendation
+
+>>>>>>> 0eab1c25ee186b4e2a0fb04408549381cc17e374
 end

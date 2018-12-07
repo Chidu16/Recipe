@@ -40,6 +40,10 @@ gem 'carrierwave'
 
 gem 'mini_magick'
 
+<<<<<<< HEAD
+=======
+#gem 'notifications', '~> 0.6.0'
+>>>>>>> 0eab1c25ee186b4e2a0fb04408549381cc17e374
 gem 'will_paginate'
 
 gem 'bootstrap-will_paginate'
