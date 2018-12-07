@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_12_06_170437) do
+ActiveRecord::Schema.define(version: 2018_12_07_113522) do
 
   create_table "comments", force: :cascade do |t|
     t.text "body"
@@ -118,12 +118,15 @@ ActiveRecord::Schema.define(version: 2018_12_06_170437) do
     t.index ["user_id"], name: "index_recipes_on_user_id"
   end
 
+<<<<<<< HEAD
   create_table "recommendations", force: :cascade do |t|
     t.integer "recipe_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["recipe_id"], name: "index_recommendations_on_recipe_id"
   end
+=======
+>>>>>>> d06a4393d67e5cd09521240d96e6f4f6549b4944
 
   create_table "searches", force: :cascade do |t|
     t.string "keywords"

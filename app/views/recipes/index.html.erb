@@ -1,12 +1,6 @@
 <p id="notice"><%= notice %></p>
 
-<<<<<<< HEAD
-<%= form_tag(recipes_path, :method => "get", id: "search-form") do %>
-    <%= text_field_tag :search, params[:search], placeholder: "Search Recipes" %>
-    <%= submit_tag "Search", :name => nil %>
-<% end %>
-=======
->>>>>>> 27a999bfb73cc5684881400ed10ac9d607c63ce9
+
 
 
 <% if @recipes.blank? %>
@@ -45,13 +39,6 @@
   </tbody>
 </table>
 
-<<<<<<< HEAD
-  
-<br>
-<% if user_signed_in? %>
-<%= link_to 'New Recipe', new_recipe_path %>
-<% end %>
-=======
 
 
 <!--<nav aria-label="Page navigation">-->
@@ -73,4 +60,3 @@
 <!--    </li>-->
 <!--  </ul>-->
 <!--</nav>-->
->>>>>>> 27a999bfb73cc5684881400ed10ac9d607c63ce9

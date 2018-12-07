@@ -4,7 +4,7 @@ class NotificationsController < ApplicationController
   # GET /notifications
   # GET /notifications.json
   def index
-    @notifications = current_user.Notification.all
+    @notifications = current_user.notifications.all
   end
 
   # GET /notifications/1

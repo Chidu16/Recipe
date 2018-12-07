@@ -22,7 +22,7 @@ class CommentObserver < ActiveRecord::Observer
     
     @logger = MyLogger.instance
     @logger.logInformation("###############Observer Demo:#")
-    @logger.logInformation("+++ CommentObserver: The comment has been added 40")
+    @logger.logInformation("+++ CommentObserver: The comment has been added 50")
     @logger.logInformation("##############################")
 
     
