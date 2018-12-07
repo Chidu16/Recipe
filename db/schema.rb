@@ -10,7 +10,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 2018_12_06_153831) do
+=======
 ActiveRecord::Schema.define(version: 2018_12_06_170437) do
+>>>>>>> 27a999bfb73cc5684881400ed10ac9d607c63ce9
 
   create_table "comments", force: :cascade do |t|
     t.text "body"
@@ -82,6 +86,16 @@ ActiveRecord::Schema.define(version: 2018_12_06_170437) do
     t.datetime "updated_at", null: false
     t.index ["meal_plan_id"], name: "index_meals_on_meal_plan_id"
     t.index ["recipe_id"], name: "index_meals_on_recipe_id"
+  end
+
+  create_table "notifications", force: :cascade do |t|
+    t.string "from_name"
+    t.integer "user_id"
+    t.integer "comment_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["comment_id"], name: "index_notifications_on_comment_id"
+    t.index ["user_id"], name: "index_notifications_on_user_id"
   end
 
   create_table "profiles", force: :cascade do |t|

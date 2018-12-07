@@ -40,11 +40,16 @@ gem 'carrierwave'
 
 gem 'mini_magick'
 
+<<<<<<< HEAD
+#gem 'notifications', '~> 0.6.0'
+=======
 gem 'will_paginate'
 
 gem 'bootstrap-will_paginate'
 
+>>>>>>> 27a999bfb73cc5684881400ed10ac9d607c63ce9
 
+gem 'rails-observers'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
