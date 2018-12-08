@@ -23,28 +23,22 @@
   
 
 
-<div class="form-group">
-<div class="row">
-<div class="col-sm-offset-2 col-sm-8">
- <%= form.collection_check_boxes :ingredient_ids, Ingredient.all, :id, :Name do |ing| %>
-<% ing.label(class: "checkbox-inline input_checkbox") {ing.check_box(class: "checkbox") + ing.text} %>
-<% end %>
-</div>
-</div>
-</div>
-
-
 <div class="field">
-    
+<%= form.label :ingredient_ids, "Ingredients" %>
+<%= form.collection_select :ingredient_ids, Ingredient.order(:Name), :id, :Name,{}, multiple: true %>
+</div>
+<br/>
+<div class="field">
+    <%= form.label :cuisine_id, "Cuisine" %>
     <%= collection_select(:recipe, :cuisine_id, Cuisine.all, :id, :CuisineType, prompt: true) %>
   </div>
-
+<br/>
 <div class="field">
-    
+    <%= form.label :course_id, "Course" %>
     <%= collection_select(:recipe, :course_id, Course.all, :id, :CourseType, prompt: true) %>
   </div>
   
-  
+  <br/>
   <p>
     <%= form.file_field :image %>
   </p>

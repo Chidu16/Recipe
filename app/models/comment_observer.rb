@@ -12,6 +12,7 @@ class CommentObserver < ActiveRecord::Observer
     
     @comment = Comment.last
     
+    puts "======================================================================================"
     puts @comment.inspect
     
     @usernotification=Notification.new(:from_name => @comment.user.profile.firstname, :user_id => @comment.recipe.user_id, :comment_id => @comment.id)

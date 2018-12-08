@@ -6,12 +6,13 @@ class RecipesController < ApplicationController
   # GET /recipes
   # GET /recipes.json
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.all.paginate(page:  params[:page], per_page:  5)
   end
 
   # GET /recipes/1
   # GET /recipes/1.json
   def show
+    # @recipe = current_user.recipes.find(params[:id])
     @comments = @recipe.comments.all
     @comment = @recipe.comments.build
   end
@@ -24,6 +25,7 @@ class RecipesController < ApplicationController
 
   # GET /recipes/1/edit
   def edit
+     @recipe = current_user.recipes.find(params[:id])
   end
 
   # POST /recipes
@@ -68,25 +70,15 @@ class RecipesController < ApplicationController
   end
   
   def index
-    #@recipes = Recipe.all
-    puts "$%%"
-    
-    puts params[:search].inspect
     
     if params[:search]
-      @recipes = Recipe.search(params[:search])
-      
-      puts "if body"
 
-      puts @recipes.inspect
       @recipes = Recipe.search(params[:search]).order("created_at DESC")
       
     else
        
       @recipes = Recipe.all.order("created_at DESC")
-      puts "else body"
-
-      puts @recipes.inspect
+      
     end
   end
 
