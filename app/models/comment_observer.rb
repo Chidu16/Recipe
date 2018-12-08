@@ -2,7 +2,7 @@ require 'my_logger'
 
 class CommentObserver < ActiveRecord::Observer
   
-  #observe :comment
+  observe :comment
   #include Observable
     
   

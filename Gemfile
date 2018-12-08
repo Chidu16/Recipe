@@ -45,6 +45,8 @@ gem 'will_paginate'
 
 gem 'chosen-rails'
 
+gem 'devise-security'
+
 gem 'bootstrap-will_paginate'
 
 
