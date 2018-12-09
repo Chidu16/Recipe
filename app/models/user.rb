@@ -25,15 +25,24 @@ class User < ApplicationRecord
          has_many :comments, dependent: :destroy
          has_many :recipes, dependent: :destroy
 
+
          has_many :notifications, dependent: :destroy
          has_many :notifylikes, dependent: :destroy
         
+<<<<<<< HEAD
          
+=======
+<<<<<<< HEAD
+
+        
+=======
+>>>>>>> 901831a8944c8f704bb0f9ba17b437da9e77e1f4
            def recipe_options
               @recipe=Recipe.all
               @recipe.map do |recipe|
               [recipe.name, recipe.id]
               end
         end
+>>>>>>> 97cc4102a68f494c5eb2cfe26461f9f43489b447
 
 end

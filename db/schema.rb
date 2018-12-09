@@ -10,6 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
+ActiveRecord::Schema.define(version: 2018_12_06_170437) do
+=======
 ActiveRecord::Schema.define(version: 2018_12_08_144010) do
 
   create_table "categories", force: :cascade do |t|
@@ -17,6 +20,7 @@ ActiveRecord::Schema.define(version: 2018_12_08_144010) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+>>>>>>> 97cc4102a68f494c5eb2cfe26461f9f43489b447
 
   create_table "comments", force: :cascade do |t|
     t.text "body"
@@ -136,6 +140,16 @@ ActiveRecord::Schema.define(version: 2018_12_08_144010) do
     t.index ["user_id"], name: "index_recipes_on_user_id"
   end
 
+<<<<<<< HEAD
+  create_table "recommendations", force: :cascade do |t|
+    t.integer "recipe_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["recipe_id"], name: "index_recommendations_on_recipe_id"
+  end
+
+=======
+>>>>>>> 97cc4102a68f494c5eb2cfe26461f9f43489b447
   create_table "searches", force: :cascade do |t|
     t.string "keywords"
     t.integer "ingredient_id"

@@ -6,6 +6,10 @@ one:
   course: one
   cuisine: one
   user: one
+<<<<<<< HEAD
+  
+=======
+>>>>>>> 97cc4102a68f494c5eb2cfe26461f9f43489b447
 
 two:
   name: MyString

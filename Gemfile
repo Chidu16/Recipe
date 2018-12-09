@@ -41,6 +41,7 @@ gem 'carrierwave'
 gem 'mini_magick'
 
 #gem 'notifications', '~> 0.6.0'
+
 gem 'will_paginate'
 
 gem 'chosen-rails'

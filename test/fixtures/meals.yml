@@ -4,8 +4,15 @@ one:
   date: 2018-12-01
   recipe: one
   meal_plan: one
+<<<<<<< HEAD
+two:
+  date: 2018-12-01
+  recipe: two
+  meal_plan: two
+=======
 
 two:
   date: 2018-12-01
   recipe: two
   meal_plan: two
+>>>>>>> 97cc4102a68f494c5eb2cfe26461f9f43489b447
