@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+<<<<<<< HEAD
   user: MyString
   body: MyText
   recipe: MyString
@@ -11,3 +12,13 @@ two:
   body: MyText
   recipe: MyString
  
+=======
+  body: MyText
+  recipe: one
+  user: one
+
+two:
+  body: MyText
+  recipe: one
+  user: one
+>>>>>>> 97cc4102a68f494c5eb2cfe26461f9f43489b447

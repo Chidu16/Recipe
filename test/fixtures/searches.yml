@@ -2,12 +2,12 @@
 
 one:
   keywords: MyString
-  ingredient_id: 1
-  course_id: 1
-  cuisine_id: 1
+  # #ingredient: one
+  # course: one
+  # cuisine: one
 
 two:
   keywords: MyString
-  ingredient_id: 1
-  course_id: 1
-  cuisine_id: 1
+  # #ingredient: two
+  # course: two
+  # cuisine: two

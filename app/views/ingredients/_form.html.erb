@@ -16,9 +16,9 @@
     <%= form.text_field :Name %>
   </div>
   
-  <div class="field">
-    <%= form.label :category %>
-    <%= form.text_field :category %>
+ <div class="field">
+    
+    <%= collection_select(:ingredient, :category_id , Category.all, :id, :categoryname, prompt: true) %>
   </div>
 
   <div class="actions">

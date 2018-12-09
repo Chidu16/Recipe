@@ -5,7 +5,14 @@
 # below each fixture, per the syntax in the comments below
 #
 one:
+<<<<<<< HEAD
   email: MyString
   
 one:
   email: MyString
+=======
+    email: mystring@mystring.com
+
+two:
+    email: mystring2@mystring.com
+>>>>>>> 97cc4102a68f494c5eb2cfe26461f9f43489b447

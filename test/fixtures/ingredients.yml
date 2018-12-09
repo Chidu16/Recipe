@@ -2,6 +2,10 @@
 
 one:
   Name: MyString
+  category: Mystring
+  category: one
 
 two:
   Name: MyString
+  category: Mystring
+  category: two

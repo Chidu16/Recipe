@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @notifylike.name %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @notifylike.user %>
+</p>
+
+<p>
+  <strong>Like:</strong>
+  <%= @notifylike.like %>
+</p>
+
+<%= link_to 'Edit', edit_notifylike_path(@notifylike) %> |
+<%= link_to 'Back', notifylikes_path %>

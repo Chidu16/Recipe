@@ -1,6 +1,7 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
+<<<<<<< HEAD
   user: one
   from_name: MyString
   comment: MyString
@@ -10,3 +11,13 @@ two:
   from_name: MyString
   comment: MyString
   
+=======
+  from_name: MyString
+  user: one
+  comment: one
+
+two:
+  from_name: MyString
+  user: two
+  comment: two
+>>>>>>> 97cc4102a68f494c5eb2cfe26461f9f43489b447

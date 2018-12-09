@@ -44,6 +44,8 @@ gem 'mini_magick'
 
 gem 'will_paginate'
 
+gem 'chosen-rails'
+
 gem 'bootstrap-will_paginate'
 
 

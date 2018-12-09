@@ -10,4 +10,10 @@ class Meal < ApplicationRecord
   "#{start_date} - #{end_date}"
   end
 
+  # def recipe_options
+  #           @recipe=Recipe.all
+  #           @recipe.map do |recipe|
+  #           [recipe.name, recipe.id]
+  #           end
+  #   end
 end

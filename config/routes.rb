@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  resources :notifylikes
+  resources :categories
   resources :notifications
   resources :meals
   resources :meal_plans

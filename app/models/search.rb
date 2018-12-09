@@ -3,6 +3,9 @@ class Search < ApplicationRecord
       def recipes
         @recipes ||= find_recipes
       end
+    
+      
+      
 
 private
 

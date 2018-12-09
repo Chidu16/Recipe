@@ -4,7 +4,15 @@ one:
   start_date: 2018-12-01
   end_date: 2018-12-01
   user: one
+<<<<<<< HEAD
 two:
   start_date: 2018-12-01
   end_date: 2018-12-01
   user: two
+=======
+
+two:
+  start_date: 2018-12-01
+  end_date: 2018-12-01
+  user: two
+>>>>>>> 97cc4102a68f494c5eb2cfe26461f9f43489b447
