@@ -31,3 +31,6 @@
 ###############Observer Demo:#
 +++ CommentObserver: The comment has been added 50
 ##############################
+###############Observer Demo:#
++++ CommentObserver: The comment has been added 50
+##############################

@@ -2,6 +2,8 @@
 
 one:
   Steps: MyString
+  recipe: MyString
 
 two:
   Steps: MyString
+  recipe: MyString

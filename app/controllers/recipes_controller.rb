@@ -68,25 +68,19 @@ class RecipesController < ApplicationController
   end
   
   def index
-    #@recipes = Recipe.all
-    puts "$%%"
-    
+  
     puts params[:search].inspect
     
     if params[:search]
-      @recipes = Recipe.search(params[:search])
-      
-      puts "if body"
-
-      puts @recipes.inspect
+   
+  
       @recipes = Recipe.search(params[:search]).order("created_at DESC")
       
     else
        
       @recipes = Recipe.all.order("created_at DESC")
-      puts "else body"
+     
 
-      puts @recipes.inspect
     end
   end
 

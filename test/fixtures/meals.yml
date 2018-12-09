@@ -3,7 +3,8 @@
 one:
   date: 2018-12-01
   recipe: one
-
+  meal_plan: one
 two:
   date: 2018-12-01
   recipe: two
+  meal_plan: two

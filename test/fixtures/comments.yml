@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  user_name: MyString
+  user: MyString
   body: MyText
   recipe: MyString
-  references: MyString
+ 
 
 two:
-  user_name: MyString
+  user: MyString
   body: MyText
   recipe: MyString
-  references: MyString
+ 

@@ -21,10 +21,7 @@ class User < ApplicationRecord
          has_many :comments, dependent: :destroy
          has_many :recipes, dependent: :destroy
 
-<<<<<<< HEAD
 
-=======
->>>>>>> d06a4393d67e5cd09521240d96e6f4f6549b4944
          has_many :notifications, dependent: :destroy
         
 

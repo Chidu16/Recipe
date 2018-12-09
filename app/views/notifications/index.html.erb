@@ -3,25 +3,11 @@
 <h1>Notifications</h1>
 
 
-<<<<<<< HEAD
-  <tbody>
-    <% @notifications.each do |notification| %>
-      <tr>
-        <td><%= notification.user_id %></td>
-        <td><%= link_to 'Show', notification %></td>
-        <td><%= link_to 'Edit', edit_notification_path(notification) %></td>
-        <td><%= link_to 'Destroy', notification, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-=======
 <% @notifications.each do |notification| %>
 <ul>
 <li><%= notification.from_name %> has commented <%=notification.comment.body %> on <%= notification.created_at %></li>
 </ul>
 <% end %>
->>>>>>> d06a4393d67e5cd09521240d96e6f4f6549b4944
 
 <!--<table>-->
 <!--  <thead>-->
