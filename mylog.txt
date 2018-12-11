@@ -70,3 +70,6 @@
 =======
 >>>>>>> 97cc4102a68f494c5eb2cfe26461f9f43489b447
 >>>>>>> 901831a8944c8f704bb0f9ba17b437da9e77e1f4
+###############Observer Demo:#
++++ CommentObserver: The comment has been added 50
+##############################

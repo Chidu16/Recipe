@@ -11,6 +11,9 @@ Rails.application.routes.draw do
   resources :profiles
   get '/signedinuserprofile' => 'profiles#signedinuserprofile'
   devise_for :users
+  # devise_for :users, controllers: { registrations: 'users/registrations' }
+  
+  # devise_for :org_people, :controllers => {:registrations => "org_people/registrations"}
   root :to => 'home#index'
   get 'home/index'
   resources :searches

@@ -70,29 +70,15 @@ class RecipesController < ApplicationController
   end
   
   def index
-<<<<<<< HEAD
-  
-    puts params[:search].inspect
-    
-    if params[:search]
-   
-  
-=======
     
     if params[:search]
 
->>>>>>> 97cc4102a68f494c5eb2cfe26461f9f43489b447
       @recipes = Recipe.search(params[:search]).order("created_at DESC")
       
     else
        
       @recipes = Recipe.all.order("created_at DESC")
-<<<<<<< HEAD
-     
-
-=======
       
->>>>>>> 97cc4102a68f494c5eb2cfe26461f9f43489b447
     end
   end
 

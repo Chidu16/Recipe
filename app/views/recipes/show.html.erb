@@ -45,7 +45,7 @@
 
 
 
-
+<% if user_signed_in? %>
 	<%= link_to recipe_likes_path(@recipe, like: true), method: 'post', remote: true do %>
   <i class="icon-thumbs-up"></i>
 	<%= @recipe.likes.count %>likes
@@ -55,11 +55,16 @@
 <% @comments.each do |comment| %>
   <div>
     <p><strong><%= comment.user.profile.firstname %></strong>: <%= comment.body %></p>
+    <% if user_signed_in? %>
+    <% if comment.user==current_user %>
     <p><%= link_to 'Delete', comment_path(current_user.comments), method: :delete, data: { confirm: 'Are you sure?' } %></p>
+    <% end %>
+    <% end %>
   </div>
 <% end %>
 <%= render partial: 'comments/form', locals: { comment: @comment } %>
 
+<% end %>
 
 <% if user_signed_in? %>
 <%= link_to 'Edit', edit_recipe_path(@recipe) %> |

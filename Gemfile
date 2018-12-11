@@ -46,7 +46,7 @@ gem 'will_paginate'
 
 gem 'chosen-rails'
 
-# gem 'isStrongPassword'
+ gem 'isStrongPassword'
 
 gem 'devise-security'
 
