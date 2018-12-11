@@ -2,16 +2,8 @@
 
 one:
   Steps: MyString
-<<<<<<< HEAD
-  recipe: MyString
-
-two:
-  Steps: MyString
-  recipe: MyString
-=======
   recipe: one
 
 two:
   Steps: MyString
   recipe: two
->>>>>>> 97cc4102a68f494c5eb2cfe26461f9f43489b447

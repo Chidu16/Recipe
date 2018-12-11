@@ -12,8 +12,8 @@ private
     def find_recipes
       recipes = Recipe.order(:name)
       recipes = recipes.where( "recipes.name like ?","%#{keywords}%") if keywords.present?
-      recipes = recipes.joins(:ingredients).where(ingredients:{:id => search[:ingredient_id]})
-    # .having("count(*)>=?",cnt )
+    #   recipes = recipes.joins(:ingredients).where(ingredients:{:id => search[:ingredient_id]})
+    # # .having("count(*)>=?",cnt )
       recipes = recipes.joins(:ingredients).where(ingredients: { id: ingredient_id}) if ingredient_id.present?
       recipes = recipes.where(course_id: course_id) if course_id.present?
       recipes = recipes.where(cuisine_id: cuisine_id) if cuisine_id.present?

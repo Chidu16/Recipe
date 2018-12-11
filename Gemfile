@@ -50,6 +50,8 @@ gem 'chosen-rails'
 
 gem 'devise-security'
 
+gem 'rails_email_validator'
+
 gem 'bootstrap-will_paginate'
 
 
