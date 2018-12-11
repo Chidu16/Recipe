@@ -29,27 +29,14 @@ class User < ApplicationRecord
          has_many :notifications, dependent: :destroy
          has_many :notifylikes, dependent: :destroy
         
-<<<<<<< HEAD
+
         
         def recipe_options
             @recipe=Recipe.all
             @recipe.map do |recipe|
             [recipe.name, recipe.id]
-            end
-=======
-<<<<<<< HEAD
-         
-=======
-<<<<<<< HEAD
+        end
 
         
-=======
->>>>>>> 901831a8944c8f704bb0f9ba17b437da9e77e1f4
-           def recipe_options
-              @recipe=Recipe.all
-              @recipe.map do |recipe|
-              [recipe.name, recipe.id]
-              end
->>>>>>> 6c7d86cbc75c7e30b072f49a849cbed7ff2fa503
         end
 end
