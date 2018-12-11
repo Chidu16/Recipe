@@ -34,8 +34,6 @@
 ###############Observer Demo:#
 +++ CommentObserver: The comment has been added 50
 ##############################
-<<<<<<< HEAD
-=======
 ###############Observer Demo:#
 +++ CommentObserver: The comment has been added 50
 ##############################
@@ -51,4 +49,4 @@
 ###############Observer Demo:#
 +++ likeObserver: The like has been added 50
 ##############################
->>>>>>> 97cc4102a68f494c5eb2cfe26461f9f43489b447
+
