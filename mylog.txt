@@ -34,23 +34,24 @@
 ###############Observer Demo:#
 +++ CommentObserver: The comment has been added 50
 ##############################
+###############Observer Demo:#
++++ CommentObserver: The comment has been added 50
+##############################
+###############Observer Demo:#
++++ CommentObserver: The comment has been added 50
+##############################
+###############Observer Demo:#
++++ likeObserver: The like has been added 50
+##############################
+###############Observer Demo:#
++++ likeObserver: The like has been added 50
+##############################
+###############Observer Demo:#
++++ likeObserver: The like has been added 50
+##############################
 <<<<<<< HEAD
+
 =======
-###############Observer Demo:#
-+++ CommentObserver: The comment has been added 50
-##############################
-###############Observer Demo:#
-+++ CommentObserver: The comment has been added 50
-##############################
-###############Observer Demo:#
-+++ likeObserver: The like has been added 50
-##############################
-###############Observer Demo:#
-+++ likeObserver: The like has been added 50
-##############################
-###############Observer Demo:#
-+++ likeObserver: The like has been added 50
-##############################
 <<<<<<< HEAD
 ###############Observer Demo:#
 +++ likeObserver: The like has been added 50
@@ -70,6 +71,10 @@
 =======
 >>>>>>> 97cc4102a68f494c5eb2cfe26461f9f43489b447
 >>>>>>> 901831a8944c8f704bb0f9ba17b437da9e77e1f4
+<<<<<<< HEAD
 ###############Observer Demo:#
 +++ CommentObserver: The comment has been added 50
 ##############################
+=======
+>>>>>>> 6c7d86cbc75c7e30b072f49a849cbed7ff2fa503
+>>>>>>> f3678e1db5a8a9c37a5615eed23ba47d531e5d7d
