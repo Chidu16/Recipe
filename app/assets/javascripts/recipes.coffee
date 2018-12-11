@@ -19,3 +19,4 @@
 
 jQuery ->
   $('#recipe_ingredient_ids').chosen()
+  

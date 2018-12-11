@@ -14,7 +14,7 @@ class ProfilesController < ApplicationController
 
   # GET /profiles/new
   def new
-    @profile = current_user.pofile.new
+    @profile = Profile.new
     @profile.user_id = current_user.id
     respond_to do |format|
     format.html # new.html.erb
@@ -30,7 +30,7 @@ class ProfilesController < ApplicationController
   # POST /profiles
   # POST /profiles.json
   def create
-    @profile = current_user.profile.new(profile_params)
+    @profile = Profile.new(profile_params)
 
     respond_to do |format|
       if @profile.save
