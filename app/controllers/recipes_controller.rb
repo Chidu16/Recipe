@@ -69,31 +69,31 @@ class RecipesController < ApplicationController
     end
   end
   
-  def index
+  # def index
     
-    if params[:search]
+  #   if params[:search]
 
-      @recipes = Recipe.search(params[:search]).order("created_at DESC")
+  #     @recipes = Recipe.search(params[:search]).order("created_at DESC")
       
-    else
+  #   else
        
-      @recipes = Recipe.all.order("created_at DESC")
+  #     @recipes = Recipe.all.order("created_at DESC")
      
 
-    end
-  end
+  #   end
+  # end
 
   
-# def index
-#   @recipes = Recipe.all
-#   if params[:sitesearch]
-#     cnt=(params[:sitesearch].split(",").size)
-#     @recipes =  Recipe.joins(:ingredients).where(ingredients:{name: params[:sitesearch].split(",")}).group("recipe_id")
-#     .having("count(*)>=?",cnt )
-#   else
-#     @recipes = Recipe.all.order("created_at DESC")
-#   end
-# end
+def index
+  @recipes = Recipe.all
+  if params[:sitesearch]
+    cnt=(params[:sitesearch].split(",").size)
+    @recipes =  Recipe.joins(:ingredients).where(ingredients:{name: params[:sitesearch].split(",")}).group("recipe_id")
+    .having("count(*)>=?",cnt )
+  else
+    @recipes = Recipe.all.order("created_at DESC")
+  end
+end
 
   private
     

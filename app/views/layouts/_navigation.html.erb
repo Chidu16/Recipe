@@ -24,19 +24,18 @@
             <li> <%= link_to "New Recipe", new_recipe_path %> </li>
             <% if current_user.admin? %>
             <li><%= link_to "Ingredients", ingredients_path %></li>
+            <li role="separator" class="divider"></li>
+            <li><%= link_to "Course", courses_path %></li>
+            <li><%= link_to "Cuisine", cuisines_path %></li>
              <% end %>
              <%end %>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">Separated link</a></li>
-            <li role="separator" class="divider"></li>
-            <li><a href="#">One more separated link</a></li>
           </ul>
         </li>
       </ul>
       <form class="navbar-form navbar-left">
         <div class="form-group">
             <%= form_tag(recipes_path, :method => "get", id: "search-form") do %>
-            <%= text_field_tag :search,  params[:search], class: "form-control", placeholder: "Search Recipes" %>
+            <%= text_field_tag :sitesearch,  params[:sitesearch], class: "form-control", placeholder: "Search by ingrdedients" %>
             <%= submit_tag "Search", class: "btn btn-default", :name => nil %>
             <% end %>
         </div>
@@ -54,7 +53,6 @@
             <li> <%= link_to "Comment Notifications", notifications_path %> </li>
              <li> <%= link_to "Like Notifications", notifylikes_path %> </li>
             <li><%= link_to "Profile", profiles_path %> </a></li>
-            <li><a href="#">Something else here</a></li>
             <li role="separator" class="divider"></li>
             <li><%= link_to 'Sign out', destroy_user_session_path,:method => :delete%></li>
           </ul>

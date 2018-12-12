@@ -32,11 +32,16 @@ has_many :ing_linkers, dependent: :delete_all
   end
   
 
- #   def self.search(*args)
- #  Recipe.joins(:ingredients).where("ingredients.name LIKE ?", "%#{search}%")
- # end
- 
- 
+ def index
+  @recipes = Recipe.all
+  if params[:sitesearch]
+    cnt=(params[:sitesearch].split(",").size)
+    @recipes =  Recipe.joins(:ingredients).where(ingredients:{name: params[:sitesearch].split(",")}).group("recipe_id")
+    .having("count(*)>=?",cnt )
+  else
+    @recipes = Recipe.all.order("created_at DESC")
+  end
+end
 
   def to_s
     

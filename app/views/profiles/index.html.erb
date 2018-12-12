@@ -18,9 +18,7 @@
         <td><%= @profiles.firstname %></td>
         <td><%= @profiles.lastname %></td>
         <td><%= @profiles.address %></td>
-        <td><%= link_to 'Show', @profiles %></td>
         <td><%= link_to 'Edit', edit_profile_path(@profiles) %></td>
-        <td><%= link_to 'Destroy', @profiles, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     
   </tbody>
