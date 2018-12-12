@@ -78,26 +78,9 @@ class RecipesController < ApplicationController
     else
        
       @recipes = Recipe.all.order("created_at DESC")
-<<<<<<< HEAD
-      
-=======
-     
 
->>>>>>> 3ab07bdde41629c7ae3bd69df6e8d99baf34ec3f
     end
   end
-
-  
-# def index
-#   @recipes = Recipe.all
-#   if params[:sitesearch]
-#     cnt=(params[:sitesearch].split(",").size)
-#     @recipes =  Recipe.joins(:ingredients).where(ingredients:{name: params[:sitesearch].split(",")}).group("recipe_id")
-#     .having("count(*)>=?",cnt )
-#   else
-#     @recipes = Recipe.all.order("created_at DESC")
-#   end
-# end
 
   private
     

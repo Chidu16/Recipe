@@ -45,17 +45,8 @@ class User < ApplicationRecord
             @recipe=Recipe.all
             @recipe.map do |recipe|
             [recipe.name, recipe.id]
-<<<<<<< HEAD
 
             end
         end
 
-
-
-=======
-            end
-
-        end
-
->>>>>>> 3ab07bdde41629c7ae3bd69df6e8d99baf34ec3f
-end
+    end
