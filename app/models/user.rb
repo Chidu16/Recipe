@@ -1,5 +1,6 @@
 # # /app/models/user.erb
 # require './lib/recommendation.rb'
+#require isStrongPassword
 
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
@@ -7,14 +8,21 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable
          
-         validate  :password_complexity
-  
-          def password_complexity
+         
+         
+         validates :email, :presence => true, :uniqueness => true
+         validates :password, length: {minimum: 8}
+         
+         validate  :password_complexity 
+         
+         def password_complexity
             # Regexp extracted from https://stackoverflow.com/questions/19605150/regex-for-password-must-contain-at-least-eight-characters-at-least-one-number-a
-            return if encrypted_password.blank? || encrypted_password =~ /(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,70}$/
+            return if ! CheckStrongPassword.check(:password)
         
             errors.add :encrypted_password, 'Complexity requirement not met. Length should be 8-70 characters and include: 1 uppercase, 1 lowercase, 1 digit and 1 special character'
           end
+  
+          
                
 
          has_one :profile
@@ -29,14 +37,41 @@ class User < ApplicationRecord
          has_many :notifications, dependent: :destroy
          has_many :notifylikes, dependent: :destroy
         
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 1c8587603897ecefa8392799dc26f334146fcff2
         
         def recipe_options
             @recipe=Recipe.all
             @recipe.map do |recipe|
             [recipe.name, recipe.id]
+<<<<<<< HEAD
         end
 
         
+=======
+            end
+=======
+<<<<<<< HEAD
+         
+=======
+<<<<<<< HEAD
+>>>>>>> f3678e1db5a8a9c37a5615eed23ba47d531e5d7d
+
+           def recipe_options
+              @recipe=Recipe.all
+              @recipe.map do |recipe|
+              [recipe.name, recipe.id]
+              end
+>>>>>>> 6c7d86cbc75c7e30b072f49a849cbed7ff2fa503
+>>>>>>> 1c8587603897ecefa8392799dc26f334146fcff2
         end
+<<<<<<< HEAD
+
+=======
+>>>>>>> f3678e1db5a8a9c37a5615eed23ba47d531e5d7d
 end

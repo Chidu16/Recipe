@@ -136,6 +136,8 @@ ActiveRecord::Schema.define(version: 2018_12_08_144010) do
     t.index ["user_id"], name: "index_recipes_on_user_id"
   end
 
+<<<<<<< HEAD
+=======
   create_table "recommendations", force: :cascade do |t|
     t.integer "recipe_id"
     t.datetime "created_at", null: false
@@ -143,6 +145,7 @@ ActiveRecord::Schema.define(version: 2018_12_08_144010) do
     t.index ["recipe_id"], name: "index_recommendations_on_recipe_id"
   end
 
+>>>>>>> f3678e1db5a8a9c37a5615eed23ba47d531e5d7d
   create_table "searches", force: :cascade do |t|
     t.string "keywords"
     t.integer "ingredient_id"

@@ -46,9 +46,11 @@ gem 'will_paginate'
 
 gem 'chosen-rails'
 
-# gem 'isStrongPassword'
+ gem 'isStrongPassword'
 
 gem 'devise-security'
+
+gem 'rails_email_validator'
 
 gem 'bootstrap-will_paginate'
 
