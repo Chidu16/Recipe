@@ -2,8 +2,6 @@
 # require './lib/recommendation.rb'
 #require isStrongPassword
 
-
-
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
@@ -14,6 +12,7 @@ class User < ApplicationRecord
          
          validates :email, :presence => true, :uniqueness => true
          validates :password, length: {minimum: 8}
+        #  validates_format_of :password, with password_complexity
          
          validate  :password_complexity 
          
@@ -45,8 +44,8 @@ class User < ApplicationRecord
             @recipe=Recipe.all
             @recipe.map do |recipe|
             [recipe.name, recipe.id]
-
             end
+
         end
 
-    end
+end

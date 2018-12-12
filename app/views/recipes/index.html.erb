@@ -27,10 +27,10 @@
           <% end %></td>
         <td><%= recipe.name %></td>
         <td><%= recipe.description %></td>
-        <td><%= link_to 'Show', recipe %></td>
         <% if user_signed_in? %>
+        <% if recipe.user==current_user%>
         <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-        <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
         <% end %>
       </tr>
     <% end %>
