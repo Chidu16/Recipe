@@ -2,12 +2,6 @@ require 'my_logger'
 
 class CommentObserver < ActiveRecord::Observer
   
-  observe :comment
-  #include Observable
-    
-  
-  
-     
   def after_create(record)
     
     @comment = Comment.last
