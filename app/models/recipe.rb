@@ -4,6 +4,7 @@ class Recipe < ApplicationRecord
 	
 	validates :name, presence: true
   validates :description, presence: true, length: {minimum: 10, maximum: 300}
+  validates_format_of :name,:description, :with => /^[a-z]+$/i,  :multiline => true
 	
 has_many :ing_linkers, dependent: :delete_all
   has_many :ingredients, through: :ing_linkers, dependent: :delete_all
