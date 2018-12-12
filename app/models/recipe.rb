@@ -27,9 +27,9 @@ has_many :ing_linkers, dependent: :delete_all
    belongs_to :user
   
   
-  def self.search(search)
-    where("recipes.name LIKE ?", "%#{search}%") 
-  end
+  # def self.search(search)
+  #   where("recipes.name LIKE ?", "%#{search}%") 
+  # end
   
 
  def index
