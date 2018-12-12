@@ -77,12 +77,17 @@ class RecipesController < ApplicationController
       
   #   else
        
+<<<<<<< HEAD
   #     @recipes = Recipe.all.order("created_at DESC")
      
+=======
+      @recipes = Recipe.all.order("created_at DESC")
+>>>>>>> 59ad4859a953071a05638600025251a795916fb1
 
   #   end
   # end
 
+<<<<<<< HEAD
   
 def index
   @recipes = Recipe.all
@@ -95,6 +100,8 @@ def index
   end
 end
 
+=======
+>>>>>>> 59ad4859a953071a05638600025251a795916fb1
   private
     
     def set_recipe

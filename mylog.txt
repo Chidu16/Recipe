@@ -49,8 +49,9 @@
 ###############Observer Demo:#
 +++ likeObserver: The like has been added 50
 ##############################
-<<<<<<< HEAD
 
+<<<<<<< HEAD
+=======
 =======
 <<<<<<< HEAD
 ###############Observer Demo:#
@@ -78,3 +79,4 @@
 =======
 >>>>>>> 6c7d86cbc75c7e30b072f49a849cbed7ff2fa503
 >>>>>>> f3678e1db5a8a9c37a5615eed23ba47d531e5d7d
+>>>>>>> 1c8587603897ecefa8392799dc26f334146fcff2

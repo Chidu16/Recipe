@@ -43,6 +43,7 @@ has_many :ing_linkers, dependent: :delete_all
   end
 end
 
+
   def to_s
     
   self.name
