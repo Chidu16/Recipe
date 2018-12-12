@@ -1,31 +1,26 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Notifylikes</h1>
+<h1>Likes on your Recipes</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>User</th>
-      <th>Like</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<!--<table>-->
+<!--  <thead>-->
+<!--    <tr>-->
+<!--      <th>Name</th>-->
+<!--      <th>User</th>-->
+<!--      <th>Like</th>-->
+<!--      <th colspan="3"></th>-->
+<!--    </tr>-->
+<!--  </thead>-->
 
-  <tbody>
+<!--  <tbody>-->
     <% @notifylikes.each do |notifylike| %>
-      <tr>
-        <td><%= notifylike.name %></td>
-        <td><%= notifylike.user %></td>
-        <td><%= notifylike.like %></td>
-        <td><%= link_to 'Show', notifylike %></td>
-        <td><%= link_to 'Edit', edit_notifylike_path(notifylike) %></td>
-        <td><%= link_to 'Destroy', notifylike, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <ul>
+      <li><%= notifylike.name %> has liked your recipe <%=notifylike.like.recipe %> on <%= notifylike.created_at %></li>
+      </ul>
+     <% end %>
+<!--  </tbody>-->
+<!--</table>-->
 
-<br>
+<!--<br>-->
 
-<%= link_to 'New Notifylike', new_notifylike_path %>
+<!--<%= link_to 'New Notifylike', new_notifylike_path %>-->

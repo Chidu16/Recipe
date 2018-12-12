@@ -4,6 +4,7 @@ class Recipe < ApplicationRecord
 	
 	validates :name, presence: true
   validates :description, presence: true, length: {minimum: 10, maximum: 300}
+  validates_format_of :name,:description, :with => /^[a-z]+$/i,  :multiline => true
 	
 has_many :ing_linkers, dependent: :delete_all
   has_many :ingredients, through: :ing_linkers, dependent: :delete_all
@@ -31,6 +32,15 @@ has_many :ing_linkers, dependent: :delete_all
   end
   
 
+<<<<<<< HEAD
+=======
+ #   def self.search(*args)
+ #  Recipe.joins(:ingredients).where("ingredients.name LIKE ?", "%#{search}%")
+ # end
+ 
+ 
+
+>>>>>>> 3ab07bdde41629c7ae3bd69df6e8d99baf34ec3f
   def to_s
     
   self.name

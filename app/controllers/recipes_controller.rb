@@ -78,7 +78,12 @@ class RecipesController < ApplicationController
     else
        
       @recipes = Recipe.all.order("created_at DESC")
+<<<<<<< HEAD
       
+=======
+     
+
+>>>>>>> 3ab07bdde41629c7ae3bd69df6e8d99baf34ec3f
     end
   end
 
